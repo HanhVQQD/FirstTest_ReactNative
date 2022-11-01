@@ -71,14 +71,21 @@ export default function CardCreateCard() {
 }
 const styles = StyleSheet.create({
   item: {
-    backgroundColor: 'gray',
+    backgroundColor: '#F5F7FA',
     padding: 10,
     marginVertical: 8,
     marginHorizontal: 10,
     borderRadius: 4,
-    shadowColor: '#000',
-    shadowRadius: 8,
+    shadowColor: "#F5F7FA",
+    shadowOffset: {
+      width: 0,
+      height: 8,
+    },
+    shadowOpacity: 0.44,
+    shadowRadius: 10.32,
+    elevation: 16,
   },
+
   imageCard: {
     width: 100,
     height: 100,
@@ -89,8 +96,8 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 13,
     fontWeight: '400',
-    backgroundColor: '#F7E8C9',
     borderRadius: 20,
     padding: 5,
+    lineHeight: 18,
   }
 });

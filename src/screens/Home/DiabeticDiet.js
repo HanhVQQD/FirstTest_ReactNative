@@ -19,7 +19,9 @@ const styles = StyleSheet.create({
   },
   titleTopBanner: {
     fontSize: 16,
-    color: "red",
+    color: "#090F47",
+    fontWeight: "600",
+    lineHeight: 20.6,
   },
 });
 

@@ -3,8 +3,9 @@ import React from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
 import CardAllProducts from './CardAllProduct';
 import CardCreateCard from './CardDiabeticDiet';
+// import React, {useEffect} from 'react';
 
-const AllProducts = () => {
+const AllProducts = ({route, navigation}) => {
   return (
     <View style={styles.cards}>
         <Text style={styles.titleTopBanner}>All Products</Text>
@@ -20,7 +21,9 @@ const styles = StyleSheet.create({
   },
   titleTopBanner: {
     fontSize: 16,
-    color: "red",
+    color: "#090F47",
+    fontWeight: "600",
+    lineHeight: 20.6,
   },
 });
 

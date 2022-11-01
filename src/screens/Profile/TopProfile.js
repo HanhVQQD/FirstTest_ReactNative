@@ -7,25 +7,39 @@ const TopProfile = () => {
         style={styles.imgProfile}
         source={require('../../assets/images/profile.jpg')}
       />
-      <Text style={styles.nameClient}>Hi, Ben Clien</Text>
+      <View style={styles.nameClients}>
+        <Text style={styles.nameClient}>Hi, Ben Clien</Text>
+        <Text style={styles.wellcome}>Welcome to Medtech</Text>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   topProfile: {
-    flex: 1
+    flexDirection: 'row',
+    marginTop: 15,
   },
   imgProfile: {
-    width: 100,
-    height: 62,
-    borderRadius: 200,
+    width: 80,
+    height: 80,
+    borderRadius: 80/2,
+  },
+  nameClients: {
+    marginLeft: 20,
   },
   nameClient: {
+    marginTop: 15,
+    marginBottom: 5,
     fontWeight: "700",
     fontSize: 20,
     lineHeight: 26,
     color: "black",
+  }, 
+  wellcome: {
+    fontSize: 14,
+    fontWeight: "400",
+    lineHeight: 18,
   }
 });
 

@@ -10,7 +10,7 @@ const Item = ({ name, image }) =>
         </View>
     );
 }
-export default function CardAllProducts()
+const CardAllProducts = ({navigation}) =>
 {
     const products = [
         {
@@ -56,15 +56,13 @@ export default function CardAllProducts()
     ];
 
     const renderItem = ({ item }) => (
-        // <Item name={item.name} image={item.image} />
         <TouchableOpacity
-            onPress={() =>
-            {
-                navigation.navigate( { headerTitle: 'Lemon' });
-            }}
+        onPress={() => {
+            navigation.navigate('ProductDetail', {headerTitle: 'Product 2'});
+          }}
             style={styles.item}>
             <Image style={styles.imageCard} source={{ uri: item.image }} />
-            <Text>{item?.name}</Text>
+            <Text style={styles.titleCard}>{item?.name}</Text>
         </TouchableOpacity>
     );
 
@@ -80,13 +78,19 @@ export default function CardAllProducts()
 }
 const styles = StyleSheet.create({
     item: {
-        backgroundColor: '#C0C0C0',
+        backgroundColor: '#F5F7FA',
         padding: 10,
-        borderRadius: 4,
-        shadowColor: '#000',
-        shadowRadius: 2,
-        marginHorizontal: 10,
         marginVertical: 8,
+        marginHorizontal: 10,
+        borderRadius: 4,
+        shadowColor: "#F5F7FA",
+        shadowOffset: {
+        width: 0,
+        height: 8,
+        },
+        shadowOpacity: 0.44,
+        shadowRadius: 10.32,
+        elevation: 16,
     },
     imageCard: {
         width: 150,
@@ -98,9 +102,9 @@ const styles = StyleSheet.create({
         color: 'black',
         fontSize: 13,
         fontWeight: '400',
-        backgroundColor: '#F7E8C9',
         borderRadius: 20,
         padding: 5,
+        lineHeight: 18,
     },
     scrollView: {
         marginHorizontal: 20,
@@ -110,3 +114,5 @@ const styles = StyleSheet.create({
     },
 
 });
+
+export default CardAllProducts;

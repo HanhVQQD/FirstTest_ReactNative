@@ -84,6 +84,7 @@ const BottomTabs = () => {
         }}
       />
     </BottomTab.Navigator>
+    
   );
 };
 
