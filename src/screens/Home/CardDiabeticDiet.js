@@ -9,6 +9,7 @@ const Item = ({ name, image }) => {
     </View>
   );
 }
+
 export default function CardCreateCard() {
 
   const products = [
@@ -92,6 +93,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     borderRadius: 20,
   },
+
   titleCard: {
     color: 'black',
     fontSize: 13,
@@ -100,4 +102,5 @@ const styles = StyleSheet.create({
     padding: 5,
     lineHeight: 18,
   }
+  
 });
